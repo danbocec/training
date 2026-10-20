@@ -51,19 +51,28 @@ public class Client {
     }
 
     public Program getProgram() {
+        if (program == null) {
+            System.out.println("Client " + this.name + " has no program assigned.");
+            return null;
+        }
         System.out.println("Client " + this.name + " has the following program: " + program.getProgramName());
         return program;
     }
 
     public List<ProgramExercise> getExercises() {
-        System.out.println("Client " + this.name + " has the following exercises: ");
+        if (program == null) {
+            System.out.println("Client " + this.name + " has no program assigned.");
+            return null;
+        }
         for (ProgramExercise exercise : program.getExercises()) {
             System.out.println("- " + exercise.getExercise().getExerciseName());
         }
         return program.getExercises();
+
+        }
 }
 
 
 
 
-}
+
