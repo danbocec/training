@@ -2,10 +2,10 @@ package com.example.training.classesTest;
 
 import org.junit.jupiter.api.Test;
 
-import com.example.training.classes.Client;
-import com.example.training.classes.Exercise;
-import com.example.training.classes.Program;
-import com.example.training.classes.ProgramExercise;
+import com.example.training.model.Client;
+import com.example.training.model.Exercise;
+import com.example.training.model.Program;
+import com.example.training.model.ProgramExercise;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;

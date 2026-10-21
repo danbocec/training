@@ -2,8 +2,8 @@ package com.example.training.classesTest;
 
 import org.junit.jupiter.api.Test;
 
-import com.example.training.classes.Client;
-import com.example.training.classes.Coach;
+import com.example.training.model.Client;
+import com.example.training.model.Coach;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
