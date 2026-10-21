@@ -4,12 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>training</title>
+      <script src="./clients.js" defer></script>
+
   </head>
-  <script src="./app.js" defer></script>
+
+
   <body>
     <h1>Client Management</h1>
     <p>Welcome to the Client Management Page!</p>
-    <button id="fetchClientsBtn">Fetch Clients</button>
+
+          <h2>Search for a client</h2>
+
+  <input id="client-search" type="text" placeholder="Search client database...">
+  <button id="fetch-client-btn">Submit</button>
+        <ul id="client-result"></ul>
+
+
+        <h2>Fetch all clients</h2>
+
+    <div> <button id="fetchClientsBtn">Fetch Clients</button></div>
+   
     <ul id="client-list"></ul>
     <div class="contact-form-container">
       <h2>Add a new client</h2>

@@ -1,3 +1,30 @@
+// Search for a client
+
+async function getOneClient() {
+  const clientName = document.getElementById("client-search").value;
+
+  try {
+    const response = await fetch(`/client/${encodeURIComponent(clientName)}`);
+
+    if (!response.ok) {
+      throw new Error("Couldn't retrieve client");
+    }
+    const client = await response.json();
+    const clientResult = document.getElementById("client-result");
+
+    const listItem = document.createElement("li");
+    listItem.textContent = `Name: ${client.name}, Age: ${client.age}, Email: ${client.email}, Phone Number: ${client.phoneNumber}, Address: ${client.address}, Membership Type: ${client.membershipType}`;
+
+    clientResult.replaceChildren(listItem);
+  } catch (error) {
+    console.error("Couldn't retrieve client", error);
+  }
+}
+
+document
+  .getElementById("fetch-client-btn")
+  .addEventListener("click", getOneClient);
+
 // Get clients from the server
 async function getClients() {
   const clients = await fetch("client/clients");
