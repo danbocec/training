@@ -11,5 +11,76 @@
     <p>Welcome to the Client Management Page!</p>
     <button id="fetchClientsBtn">Fetch Clients</button>
     <ul id="client-list"></ul>
+    <div class="contact-form-container">
+      <h2>Add a new client</h2>
+      <form id="clientForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Client's Name"
+            required
+          />
+          <span class="error-message" id="nameError"></span>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input
+            type="age"
+            id="age"
+            name="age"
+            placeholder="Client's age"
+            required
+          />
+          <span class="error-message" id="age-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Client's email"
+            required
+          />
+          <span class="error-message" id="email-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number</label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            placeholder="Client's Phone number "
+            required
+          />
+          <span class="error-message" id="phone-error"></span>
+        </div>
+          <label for="address">Address</label>
+          <input
+            type="address"
+            id="address"
+            name="address"
+            placeholder="Client's address"
+            required
+            />
+        </div>
+          <span class="error-message" id="address-error"></span>
+          <div class="form-group">
+  <label for="membershipType">Membership Type</label>
+  <input
+    type="text"
+    id="membershipType"
+    name="membershipType"
+    placeholder="Client's membership type"
+    required
+  />
+  <span class="error-message" id="membershipType-error"></span>
+</div>
+<button type="submit" class="submit-button">Add client</button>
+      </form>
+    </div>
   </body>
 </html>
