@@ -37,8 +37,8 @@ class ExerciseTest {
         ProgramExercise programExercise1 = new ProgramExercise(exercise, 10, 3);
         ProgramExercise programExercise2 = new ProgramExercise(exercise, 5, 5);
 
-        Program program1 = new Program("Upper Body Strength");
-        Program program2 = new Program("Upper Fit Body");
+        Program program1 = new Program("Upper Body Strength", 0);
+        Program program2 = new Program("Upper Fit Body", 1);
 
         program1.addExercise(programExercise1);
         program2.addExercise(programExercise2);

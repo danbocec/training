@@ -10,6 +10,7 @@ public class Client {
     private String address;
     private String membershipType;
     private Program program;
+    
 
     public Client(String name, int age, String email, String phoneNumber, String address, String membershipType) {
         this.name = name;

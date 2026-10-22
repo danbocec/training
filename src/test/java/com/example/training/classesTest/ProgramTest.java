@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class ProgramTest {
     @Test
     void testAddExercise() {
-        Program program = new Program("Upper Body Strength");
+        Program program = new Program("Upper Body Strength", 0);
         ProgramExercise exercise1 = new ProgramExercise(new Exercise("Push-ups"), 10, 3);
         ProgramExercise exercise2 = new ProgramExercise(new Exercise("Pull-ups"), 5, 3);
 
@@ -33,7 +33,7 @@ class ProgramTest {
 
     @Test
     void testRemoveExercise() {
-        Program program = new Program("Upper Body Strength");
+        Program program = new Program("Upper Body Strength", 0);
         ProgramExercise exercise1 = new ProgramExercise(new Exercise("Push-ups"), 10, 3);
         ProgramExercise exercise2 = new ProgramExercise(new Exercise("Pull-ups"), 5, 3);
 
@@ -51,7 +51,7 @@ class ProgramTest {
 
     @Test
     void testGetExercisesFromClient() {
-        Program program = new Program("Upper Body Strength");
+        Program program = new Program("Upper Body Strength", 0);
         ProgramExercise exercise1 = new ProgramExercise(new Exercise("Push-ups"), 10, 3);
         ProgramExercise exercise2 = new ProgramExercise(new Exercise("Pull-ups"), 5, 3);
 

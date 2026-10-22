@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Program {
+    private final int id;
     private String programName;
     private List<ProgramExercise> workout = new ArrayList<ProgramExercise>();
 
 
-    public Program(String ProgramName) {
+    public Program(String ProgramName, int id) {
+        this.id = id;
         this.programName = ProgramName;
     }
 
@@ -19,6 +21,10 @@ public class Program {
 
     public void setProgramName(String programName) {
         this.programName = programName;
+    }
+
+    public int  getProgramID () {
+        return this.id;
     }
 
     public List<ProgramExercise> getExercises() {
