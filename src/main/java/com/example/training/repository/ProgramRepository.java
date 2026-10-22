@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.example.training.model.Client;
+import com.example.training.model.Exercise;
 import com.example.training.model.Program;
 import com.example.training.model.ProgramExercise;
 
@@ -19,9 +20,9 @@ public class ProgramRepository {
 
     Program program1 = new Program("Upper Body", 1);
 
-     Program program2 = new Program("Lower Body", 0);
+    Program program2 = new Program("Lower Body", 0);
 
- private final List<Program> programs = new ArrayList<>(List.of(program1, program2));
+    private final List<Program> programs = new ArrayList<>(List.of(program1, program2));
 
     // Retrives all programs
     public List<Program> getAllPrograms() {
@@ -42,17 +43,6 @@ public class ProgramRepository {
     }
 
 
-
-
-
-
-
-    public List<ProgramExercise>  addExercisesToProgram (List<ProgramExercise> program, ProgramExercise exercise) {
-        if (!program.contains(exercise)) {
-            throw new Error("Exercise is already in program");
-        }
-        program.add(exercise);
-        return program;
-    } 
+    
     
 }

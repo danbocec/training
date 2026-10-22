@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.training.model.Client;
+import com.example.training.model.Exercise;
 import com.example.training.model.Program;
 import com.example.training.model.ProgramExercise;
 import com.example.training.repository.ClientRepository;
@@ -21,7 +22,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 
-@SpringBootApplication
 @RestController
 
 @RequestMapping("/program")
@@ -40,13 +40,13 @@ public class ProgramController {
     @GetMapping("/getPrograms")
     public List<Program> getPrograms () {
         return programRepository.getAllPrograms();
-    
     }
 
     @PostMapping("/postProgram")
     public Program createProgram(@RequestBody Program program) {
         return programRepository.createNewProgram(program);
     }
+
 
 }
     /* 
