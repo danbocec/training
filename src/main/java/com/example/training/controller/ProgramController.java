@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-
 @RequestMapping("/program")
 public class ProgramController {
 
@@ -28,7 +27,11 @@ public class ProgramController {
 // /program/getClient/getProgram
 // /program/getClient/postProgram
 
-    ProgramRepository programRepository = new ProgramRepository();
+   private final ProgramRepository programRepository;
+    public ProgramController(ProgramRepository programRepository) {
+    this.programRepository = programRepository;
+}
+
 
 
     // Henter ut alle programmene som er lagt til
@@ -51,10 +54,10 @@ public class ProgramController {
     
     @PostMapping("/{programID}/postExercise")
     public ProgramExercise addExerciseInProgram (@PathVariable ("programID") int programID, @RequestBody ProgramExercise programExercise) {
-        return programRepository.addProgramExerciseToProgram(programID, programExercise.getExercise(), programExercise.getRepetitions(), programExercise.getSets());
+        return programRepository.addProgramExerciseToProgram(programID, programExercise.getExercise(), programExercise.getSets(), programExercise.getRepetitions());
     }
 
-    
+
 
 
 

@@ -11,18 +11,25 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.training.model.Client;
 import com.example.training.model.Program;
 import com.example.training.repository.ClientRepository;
+import com.example.training.repository.ProgramRepository;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
-@SpringBootApplication
 @RestController
-
 @RequestMapping("/client")
 public class ClientController {
 
+    private final ProgramRepository programRepository;
+
+    public ClientController(ProgramRepository programRepository) {
+    this.programRepository = programRepository;
+}
+
 // First goal is to create an endpoint which retrives new clients and already existing ones 
+
+
     ClientRepository clientRepository = new ClientRepository();
 
     // Endpoint to retrieve all clients
@@ -44,13 +51,15 @@ public class ClientController {
     public Client createClient(@RequestBody Client client) {
         return clientRepository.createClient(client);
     }
-/* 
-    // Endpoint to assign program to already existing client
-    @PostMapping("/assignProgram")
-    public Program assignProgramToClient(@RequestBody Client client, Program program) {
-        return clientRepository.assignProgramToClient(program, client);
+
+    @PostMapping("/{clientName}/{programID}")
+    public Client assignProgramToClient(@PathVariable("clientName") String clientName,
+    @PathVariable("programID") int programID) {
+        Client client = clientRepository.getClient(clientName);
+
+        return clientRepository.assignProgramToClient(programRepository.getProgramID(programID), client);
     }
-        */
+        
 
 
 

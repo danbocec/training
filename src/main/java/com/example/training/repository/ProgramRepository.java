@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.server.ResponseStatusException;
@@ -14,6 +15,7 @@ import com.example.training.model.Exercise;
 import com.example.training.model.Program;
 import com.example.training.model.ProgramExercise;
 
+@Repository
 public class ProgramRepository {
 
 // Lage API for å legge til, endre og fjerne øvelser i programmet 

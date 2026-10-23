@@ -60,7 +60,7 @@ public class Client {
         System.out.println("Client " + this.name + " has the following program: " + program.getProgramName());
         return program;
     }
-
+/* 
     public List<ProgramExercise> getExercises() {
         if (program == null) {
             System.out.println("Client " + this.name + " has no program assigned.");
@@ -72,6 +72,7 @@ public class Client {
         return program.getExercises();
 
         }
+        */
 }
 
 
