@@ -13,7 +13,6 @@ public class ExerciseRepository {
     Exercise exercise1 = new Exercise("Knebøy");
     Exercise exercise2 = new Exercise("Benkpress");
 
-
     private final List<Exercise> exerciseList = new ArrayList<>(List.of(exercise1, exercise2));
 
 

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.training.model.Client;
+import com.example.training.model.Program;
 import com.example.training.repository.ClientRepository;
 
 import org.springframework.web.bind.annotation.PostMapping;
@@ -43,4 +44,16 @@ public class ClientController {
     public Client createClient(@RequestBody Client client) {
         return clientRepository.createClient(client);
     }
+/* 
+    // Endpoint to assign program to already existing client
+    @PostMapping("/assignProgram")
+    public Program assignProgramToClient(@RequestBody Client client, Program program) {
+        return clientRepository.assignProgramToClient(program, client);
+    }
+        */
+
+
+
+
+
 }

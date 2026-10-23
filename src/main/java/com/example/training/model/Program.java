@@ -3,15 +3,18 @@ package com.example.training.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Program {
-    private final int id;
     private String programName;
+    private final int id;
     private List<ProgramExercise> workout = new ArrayList<ProgramExercise>();
 
 
-    public Program(String ProgramName, int id) {
+    public Program(String programName, @JsonProperty("programID") int id) {
+        this.programName = programName;
         this.id = id;
-        this.programName = ProgramName;
+
     }
 
     // Getters and Setters
@@ -23,11 +26,12 @@ public class Program {
         this.programName = programName;
     }
 
-    public int  getProgramID () {
+    public int getProgramID () {
         return this.id;
     }
 
     public List<ProgramExercise> getExercises() {
+        System.out.println("The program exercise consist of following workout: " + workout);
         return workout;
     }
 

@@ -22,8 +22,16 @@ public class ProgramExercise {
         return exerciseName;
     }
 
+    public int setRepetitions() {
+        return this.repetitions;
+    }
+
     public int getRepetitions() {
         return repetitions;
+    }
+
+     public int setSets() {
+        return this.sets;
     }
 
     public int getSets() {

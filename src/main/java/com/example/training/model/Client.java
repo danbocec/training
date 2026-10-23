@@ -46,9 +46,10 @@ public class Client {
         return membershipType;
     }      
 
-    public void setProgram(Program program) {
+    public Program setProgram(Program program) {
         this.program = program;
         System.out.println("Program " + program.getProgramName() + " assigned to client " + this.name + ".");
+        return program;
     }
 
     public Program getProgram() {

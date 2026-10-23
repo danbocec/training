@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.example.training.model.Client;
+import com.example.training.model.Program;
 
 public class ClientRepository {
 
@@ -41,6 +42,15 @@ public class ClientRepository {
             return client;
             
     }
+
+
+    
+   // Assign an already existing program to a client 
+    public Client assignProgramToClient (Program program, Client client) {
+        client.setProgram(program);
+        return client;
+    }
+ 
 
 
 }
