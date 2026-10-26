@@ -73,8 +73,18 @@ public class Coach {
     }
     // Get the list of clients
     public Set<Client> getClients() {
+        for (Client client : clients) {
+            System.out.println("Client: " + client.getName());
+        }
         return clients;
+        
     }
+    // checks if coach already have an existing client
+    public boolean hasClient(Client client) {
+        return clients.contains(client);
+    }
+
+
     // Remove a client from a coach's client list 
     public void removeClient(Client client) {
         if (clients.remove(client)) {
@@ -83,6 +93,8 @@ public class Coach {
             System.out.println("Client " + client.getName() + " was not found in Coach " + this.name + "'s client list.");
         }
     }
+
+
 
 
 }

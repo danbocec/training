@@ -7,9 +7,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.training.model.Client;
-import com.example.training.model.Exercise;
-import com.example.training.model.Program;
-import com.example.training.model.ProgramExercise;
+import com.example.training.model.Coach;
+import com.example.training.repository.CoachRepository;
+
 
 @SpringBootApplication
 public class TrainingApplication {
@@ -17,27 +17,17 @@ public class TrainingApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TrainingApplication.class, args);
 
-		Exercise exercise = new Exercise("Knebøy");
+		Coach coach = new Coach("Bjarne Myr", 18, "bjarne@outlook.com", "1902", "Bjørnestien 19");
+		CoachRepository coachRepository = new CoachRepository();
+		Client client1 = new Client("Cecilie", 240, "ceciliedanbolt@outlook.com", "94891902", "Kanatareleln 5 ", "Premimum", null);
+		Client client2 = new Client("Alba", 240, "ceciliedanbolt@outlook.com", "94891902", "Kanatareleln 5 ", "Premimum", null);
 
-		ProgramExercise programExercise = new ProgramExercise(exercise, 10, 10);
+		coachRepository.assignClientToACoach(client1, coach);
+		coachRepository.assignClientToACoach(client2, coach);
+		System.out.println(coach.getClients());
+		coachRepository.removeAClientFromACoach(client1, coach);
 
-
-		Program program = new Program("Lower Body", 1);
-		
-
-		
-		program.addExercise(programExercise);
-
-		Client client1 = new Client("Cecilie", 240, "ceciliedanbolt@outlook.com", "94891902", "Kanatareleln 5 ", "Premimum");
-
-		client1.setProgram(program);
-
-
-		for (ProgramExercise item: program.getExercises()) {
-			System.out.println(item.getExercise().getExerciseName());
-		}
-		
-
+		System.out.println(coach.getClients());
 
 	}
 

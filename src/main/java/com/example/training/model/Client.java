@@ -1,6 +1,5 @@
 package com.example.training.model;
 
-import java.util.List;
 
 public class Client {
     private String name;
@@ -10,15 +9,17 @@ public class Client {
     private String address;
     private String membershipType;
     private Program program;
+    private Coach coach;
     
 
-    public Client(String name, int age, String email, String phoneNumber, String address, String membershipType) {
+    public Client(String name, int age, String email, String phoneNumber, String address, String membershipType, Coach coach) {
         this.name = name;
         this.age = age;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.address = address;
         this.membershipType = membershipType;
+        this.coach = coach;
 
     }
 
@@ -45,6 +46,14 @@ public class Client {
     public String getMembershipType() {
         return membershipType;
     }      
+
+    public Coach getCoach() {
+        return coach;
+    }
+
+    public void  setCoach(Coach coach) {
+        this.coach = coach;
+    }
 
     public Program setProgram(Program program) {
         this.program = program;

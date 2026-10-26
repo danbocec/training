@@ -11,10 +11,8 @@ import com.example.training.model.Program;
 
 public class ClientRepository {
 
-    
-
-    Client client1 = new Client("John Doe", 30, "john.doe@example.com", "123-456-7890", "123 Main St", "Premium");
-    Client client2 = new Client("Jane Doe", 25, "jane.doe@example.com", "098-765-4321", "456 Oak Ave", "Standard");
+    Client client1 = new Client("John Doe", 30, "john.doe@example.com", "123-456-7890", "123 Main St", "Premium", null);
+    Client client2 = new Client("Jane Doe", 25, "jane.doe@example.com", "098-765-4321", "456 Oak Ave", "Standard", null);
     private final List<Client> clients = new ArrayList<>(List.of(client1, client2));
 
 

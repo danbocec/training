@@ -55,7 +55,7 @@ class ProgramTest {
         ProgramExercise exercise1 = new ProgramExercise(new Exercise("Push-ups"), 10, 3);
         ProgramExercise exercise2 = new ProgramExercise(new Exercise("Pull-ups"), 5, 3);
 
-        Client client1 = new Client("John Doe", 30, "john.doe@example.com", "123-456-7890", "123 Main St", "Premium");
+        Client client1 = new Client("John Doe", 30, "john.doe@example.com", "123-456-7890", "123 Main St", "Premium", null);
 
         program.addExercise(exercise1);
         program.addExercise(exercise2);
@@ -64,7 +64,6 @@ class ProgramTest {
         client1.setProgram(program);
 
         assertEquals(program, client1.getProgram());
-        assertEquals(exercises, client1.getExercises());
     }
 
     

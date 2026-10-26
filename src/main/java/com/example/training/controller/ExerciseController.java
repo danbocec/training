@@ -2,6 +2,7 @@ package com.example.training.controller;
 
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +19,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 public class ExerciseController {
 
-    ExerciseRepository exerciseRepository = new ExerciseRepository();
+    private final ExerciseRepository exerciseRepository;
+
+    public ExerciseController (ExerciseRepository exerciseRepository) {
+        this.exerciseRepository = exerciseRepository;
+    }
+
 
     // Henter ut alle programmene som er lagt til
     @GetMapping("/getExercises")
