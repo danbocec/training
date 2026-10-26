@@ -1,5 +1,8 @@
 package com.example.training.model;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class Client {
     private String name;
@@ -47,6 +50,7 @@ public class Client {
         return membershipType;
     }      
 
+    @JsonIgnore 
     public Coach getCoach() {
         return coach;
     }
@@ -69,7 +73,7 @@ public class Client {
         System.out.println("Client " + this.name + " has the following program: " + program.getProgramName());
         return program;
     }
-/* 
+ 
     public List<ProgramExercise> getExercises() {
         if (program == null) {
             System.out.println("Client " + this.name + " has no program assigned.");
@@ -81,7 +85,7 @@ public class Client {
         return program.getExercises();
 
         }
-        */
+        
 }
 
 

@@ -22,15 +22,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class ClientController {
 
     private final ProgramRepository programRepository;
+    private final ClientRepository clientRepository;
 
-    public ClientController(ProgramRepository programRepository) {
-    this.programRepository = programRepository;
+    public ClientController(ProgramRepository programRepository, ClientRepository clientRepository) {
+    this.programRepository = 
+    programRepository;
+    this.clientRepository = clientRepository;
 }
 
-// First goal is to create an endpoint which retrives new clients and already existing ones 
 
-
-    ClientRepository clientRepository = new ClientRepository();
 
     // Endpoint to retrieve all clients
     @GetMapping("/clients")
@@ -56,7 +56,6 @@ public class ClientController {
     public Client assignProgramToClient(@PathVariable("clientName") String clientName,
     @PathVariable("programID") int programID) {
         Client client = clientRepository.getClient(clientName);
-
         return clientRepository.assignProgramToClient(programRepository.getProgramID(programID), client);
     }
         

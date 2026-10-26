@@ -3,6 +3,7 @@ package com.example.training.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Program {
@@ -29,7 +30,7 @@ public class Program {
     public int getProgramID () {
         return this.id;
     }
-
+    @JsonIgnore 
     public List<ProgramExercise> getExercises() {
         System.out.println("The program exercise consist of following workout: " + workout);
         return workout;
