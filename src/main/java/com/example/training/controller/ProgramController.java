@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.training.model.Program;
-import com.example.training.model.ProgramExercise;
+import com.example.training.entity.Program;
+import com.example.training.entity.ProgramExercise;
 import com.example.training.repository.ProgramRepository;
 
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,4 +1,4 @@
-package com.example.training.model;
+package com.example.training.entity;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -4,10 +4,10 @@ package com.example.training.classesTest;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 
-import com.example.training.model.Client;
-import com.example.training.model.Exercise;
-import com.example.training.model.Program;
-import com.example.training.model.ProgramExercise;
+import com.example.training.entity.Client;
+import com.example.training.entity.Exercise;
+import com.example.training.entity.Program;
+import com.example.training.entity.ProgramExercise;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertEquals;

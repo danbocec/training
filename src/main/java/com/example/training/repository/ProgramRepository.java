@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.example.training.model.Client;
-import com.example.training.model.Exercise;
-import com.example.training.model.Program;
-import com.example.training.model.ProgramExercise;
+import com.example.training.entity.Client;
+import com.example.training.entity.Exercise;
+import com.example.training.entity.Program;
+import com.example.training.entity.ProgramExercise;
 
 @Repository
 public class ProgramRepository {

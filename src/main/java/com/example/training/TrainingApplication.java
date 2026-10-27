@@ -1,15 +1,16 @@
 package com.example.training;
 
 import com.example.training.controller.ProgramController;
+import com.example.training.entity.Client;
+import com.example.training.entity.Coach;
+import com.example.training.entity.Program;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.training.model.Client;
-import com.example.training.model.Coach;
-import com.example.training.model.Program;
 import com.example.training.repository.CoachRepository;
 import com.example.training.repository.ProgramRepository;
 

@@ -1,17 +1,13 @@
 package com.example.training.repository;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.training.entity.Exercise;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Repository;
-import org.springframework.web.server.ResponseStatusException;
+public interface ExerciseRepository extends JpaRepository< Exercise, Long > {
+}
 
-import com.example.training.model.Exercise;
 
-@Repository 
-public class ExerciseRepository {
-
+/* 
     Exercise exercise1 = new Exercise("Knebøy");
     Exercise exercise2 = new Exercise("Benkpress");
 
@@ -34,6 +30,8 @@ public class ExerciseRepository {
 
     }
 
+    */
 
 
-}
+
+

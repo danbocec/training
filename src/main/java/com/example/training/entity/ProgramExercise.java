@@ -1,4 +1,4 @@
-package com.example.training.model;
+package com.example.training.entity;
 
 public class ProgramExercise {
     private final Exercise exerciseName;

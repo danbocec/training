@@ -7,8 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.example.training.model.Client;
-import com.example.training.model.Program;
+import com.example.training.entity.Client;
+import com.example.training.entity.Program;
 
 @Repository 
 public class ClientRepository {

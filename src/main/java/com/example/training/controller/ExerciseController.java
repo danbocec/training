@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.training.model.Exercise;
+import com.example.training.entity.Exercise;
 import com.example.training.repository.ExerciseRepository;
 
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,13 +29,13 @@ public class ExerciseController {
     // Henter ut alle programmene som er lagt til
     @GetMapping("/getExercises")
     public List <Exercise> getExercise () {
-        return exerciseRepository.getExerciseList();
+        return exerciseRepository.findAll();
     }
 
     // Posts new exercise
      @PostMapping("/postNewExercise")
-    public List<Exercise> createNewExercise(@RequestBody Exercise exercise) {
-        return exerciseRepository.createNewExercise(exercise);
+    public Exercise createNewExercise(@RequestBody Exercise exercise) {
+        return exerciseRepository.save(exercise);
     }
         
     
